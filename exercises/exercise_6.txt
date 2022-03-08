@@ -1,0 +1,17 @@
+=== Exercise 6 ===
+
+Exercise about Queuing ports
+      port status
+      read/write samplind ports and message status
+
+= Question 6.1 =
+
+Declare sampling port
+
+= Question 6.2 =
+
+Print port status
+
+= Question 6.3 =
+
+Send messages across a sampling port

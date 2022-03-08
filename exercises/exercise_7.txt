@@ -1,0 +1,25 @@
+=== Exercise 7 ===
+
+Exercises about memory
+
+On README.
+ - memory regions
+ - memory status
+ - shared memory
+
+
+= Exercise 7.1 =
+
+Create proper memories, shared memory between two partitions
+
+= Exercise 7.2 =
+
+Check memory regions you have
+
+= Exercise 7.3 =
+
+Send message across shared memory regions
+
+= Exercise 7.4 = 
+
+Now send another, larger message that makes you have to increase memory size.

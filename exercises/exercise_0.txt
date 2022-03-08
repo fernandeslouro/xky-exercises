@@ -1,0 +1,22 @@
+=== Exercise 1 ===
+
+This exercise is about partitions information. It is
+
+Some functions you should use durig this exercise:
+ - get_partition_id
+ - get_partition_status
+ - set_partition_mode
+ - permissions on accessing other partition mode and status
+
+= Question 1.1 = 
+
+Print the partition id of two partitions
+
+= Question 1.2 =
+
+Print the partition status of two partitions, with the things it contains
+
+= Question 1.3 =
+
+Using set_partition_mode and then checking the status again, some exercise about
+this, still not completely clear how I would do it.
