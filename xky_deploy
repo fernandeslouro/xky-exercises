@@ -55,7 +55,7 @@ def main():
     # Build app
     print("\nBuilding Application...")
     subprocess.run(["make", "distclean"], cwd=args.app_path)
-    xmf_make_path = os.path.join(args.xky_path, "install", "xmf_make")
+    xmf_make_path = os.path.join(os.path.relpath(args.xky_path, args.app_path), "install", "xmf_make")
     if args.xml:
         subprocess.run([xmf_make_path, args.xml], cwd=args.app_path)
     else:
