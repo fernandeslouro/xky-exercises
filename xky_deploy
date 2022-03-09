@@ -1,0 +1,90 @@
+#!/usr/bin/env python3
+
+import argparse
+import os
+import subprocess
+
+
+class XKYTarget:
+    def __init__(self, name, config, tftp_file, power_line):
+        self.name = name
+        self.config = config
+        self.tftp_file = tftp_file
+        self.power_line = power_line
+
+XKY_TARGET_TFTP_DIR = "/var/lib/tftpboot"
+
+XKY_TARGETS = {
+    "leiria": XKYTarget("leiria", "arm-bbb", "XKY_BBB_3", 1),
+    "viseu": XKYTarget("viseu", "arm-bbb", "XKY_BBB_4", 2),
+    "portalegre": XKYTarget("portalegre", "arm-bbb", "XKY_BBB_6", 3),
+    "guarda": XKYTarget("guarda", "arm-bbb", "XKY_BBB_2", 4),
+    "beja": XKYTarget("beja", "arm-bbb", "XKY_BBB_1", 5),
+    "oslo": XKYTarget("oslo", "powerpc-p1010rdb", "XKY_P1010_2", 6),
+    "veneza": XKYTarget("veneza", "powerpc-p1010rdb", "XKY_P1010_3", 7),
+    "valencia": XKYTarget("valencia", "powerpc-p1010rdb", "XKY_P1010_4", 8),
+    #"aveiro": XKYTarget("aveiro", "", "XKY_P2020_0", "p2"),
+    "londres": XKYTarget("londres", "powerpc64-t1042 --ccb 600000000", "XKY_t1042_QT_2", "p3"),
+    "qemu": XKYTarget("qemu", "powerpc-p1010qemu", "XKY_P1010_QEMU", "none"),
+}
+
+
+def main():
+    parser = argparse.ArgumentParser(description="Builds and deploys XKY applications")
+    parser.add_argument("xky_path", help="The path to the XKY distribution")
+    parser.add_argument("app_path", help="The path to the application")
+    parser.add_argument("target", choices=XKY_TARGETS.keys(), help="The target on which to deploy")
+    parser.add_argument("-i", "--install", action="store_true", help="Install XKY before building the application")
+    parser.add_argument("-x", "--xml", metavar="FILENAME", help="Explicitly provide the name of the application's XML module configuration file")
+    parser.add_argument("-f", "--force", action="store_true", help="Force deployment by deleting existing files")
+    parser.add_argument("-r", "--reset", action="store_true", help="Reset the target's power after deployment")
+    parser.add_argument("-c", "--connect", action="store_true", help="Connect to the target's serial port after deployment")
+    args = parser.parse_args()
+
+    target = XKY_TARGETS[args.target]
+
+    # Install XKY
+    if args.install:
+        print("\nInstalling XKY...")
+        subprocess.run(["make", "distclean"], cwd=args.xky_path)
+        subprocess.run(["rm", "-rf", "install"], cwd=args.xky_path)
+        subprocess.run([os.path.join(".", "configure")] + target.config.split(), cwd=args.xky_path)
+        subprocess.run(["make"], cwd=args.xky_path)
+        subprocess.run(["make", "install"], cwd=args.xky_path)
+
+    # Build app
+    print("\nBuilding Application...")
+    subprocess.run(["make", "distclean"], cwd=args.app_path)
+    xmf_make_path = os.path.join(args.xky_path, "install", "xmf_make")
+    if args.xml:
+        subprocess.run([xmf_make_path, args.xml], cwd=args.app_path)
+    else:
+        subprocess.run([xmf_make_path], cwd=args.app_path)
+    subprocess.run(["make"], cwd=args.app_path)
+
+    # Deploy app
+    print("\nDeploying XKY binary...")
+    src_path = os.path.join(args.app_path, "executable", "XKYAPP.bin")
+    dst_path = os.path.join(XKY_TARGET_TFTP_DIR, target.tftp_file)
+    if args.force:
+        subprocess.run(["rm", "-f", dst_path])
+    subprocess.run(["cp", src_path, dst_path])
+
+    # Reset board
+    if args.reset:
+        controller = "ima_powerctrl" if isinstance(target.power_line, int) else "powerctrl"
+        print("\nReseting target...")
+        subprocess.run([controller, "cycle", str(target.power_line)[-1]])
+
+    # Connect to board
+    if args.connect:
+        print("\nConnecting to target...")
+        try:
+            subprocess.run(["cat", f"/opt/shortc/{target.name}"])
+        except KeyboardInterrupt:
+            print("\nConnection closed")
+
+
+if __name__ == "__main__":
+    main()
+
