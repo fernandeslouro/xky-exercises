@@ -1,0 +1,6 @@
+*.bin
+*.exe
+Makefile
+.config
+*.o
+*.inc
