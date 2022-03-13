@@ -4,3 +4,4 @@ Makefile
 .config
 *.o
 *.inc
+init.c
