@@ -1,9 +1,0 @@
-=== Exercise 8 ===
-
-Exercises about events
-
-enable_port_activity_irq
-
-
-    /* enable port activity IRQ */
-    bare_isr_install_handler(XKY_IRQ_PORT_ACTIVITY, (bare_isr_handler_f)port_activity);

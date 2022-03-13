@@ -1,0 +1,115 @@
+=== Building First application ===
+
+1. Going to app
+2. Running "../../xmf_make && make"
+3. Loding to the tftp server
+4. Resetting the board
+5. Use putty to see the output
+
+You should see Guy Richie
+
+
+=== First App ===
+
+1. Create XML for module and partitions (better to copy one and adapt it)
+
+Explaining the parts of the XML files, permissions, schedules, etc
+
+2. Creating simple partition code. They use "xky_syscall_print"
+3. We then do the same thing using "xky_printf
+
+
+=== Adding a new partition ===
+
+1. Copy and paste the partition definition (changing the partition id and names)
+2. Copy paste the partition schedule to include the second partition
+3. Run the configurator, as it validates the XML
+
+=== MODULE_0 ===
+
+NOTE: Should implement a function for bare_wake_next_mtf before this one
+
+Funcitions to use:
+ - get_partition_id
+ - get_partition_status
+ - set_partition_mode
+ - bare_wake_next_mtf
+
+What you must implement:
+ - ts1 P1 Gets is own ID and Status and print it
+ - ts2 P2 Gets is own ID and Status and print it
+ - ts3 P1 Gets P2 ID and status and print it
+ - ts4 P2 Gets P1 ID and status and print it
+ - ts5 P1 Sets P2 to IDLE, prints P2 status, and the set is own state to IDLE
+ - Both partitions should be stopped
+
+
+=== MODULE_1 ===
+
+Functions to use:
+ - get_schedule_id
+ - get_schedule_status
+ - set_schedule
+
+What you must implement:
+ - P1 from time window to time window changes what it does using bare_wake_in_next_mtf
+	1. Prints schedule ID
+	2. Changes schedule 
+ - P2 and P3 Prints schedule ID 
+
+
+=== MODULE_2 ==
+
+Functions to use:
+ - bare_isr_handler_f
+ - bare_isr_install_handler
+
+What you must implement:
+ - Change the preview example to use events instead of the bare_wake_in_next_mtf
+
+
+=== MODULE_3 and MODULE_4 ===
+
+Functions to use:
+ - get_timer_tps
+ - start_timer
+ - get_elapsed_time
+
+What you must implement:
+ - Set 4 Different timers for each partition, that will trigger an event that will print Global time , Local Time and the information of which timer was reached 
+
+
+=== MODULE_5 ===
+
+Functions to use:
+ - get_port_id
+ - get_port_status
+ - flush_port
+ - read_port
+ - write_port
+
+What you must implement:
+ - P1 initially gets port ID, and prints the port status, after that, : 
+	1. Sends a number of messages less than MaxNbMessages
+	2. Sends a message smaller than MaxMessageSize
+ - P2 initially gets port ID, and prints the port status, after that, each time window :
+	1. Read all words on port and checks if is overflowed
+	2. Read message and check if the message size overflowed
+
+And then:
+ - Now change the partition P1 to
+	1. Sends more messages than MaxNbMessages
+	2. Sends a message larger than MaxMessageSize
+ - Verify that the previous verifications at P2 are working properly
+
+
+=== MODULE_6 ===
+
+What you must implement:
+ - Change the previous example to use sampling ports. Check the validity of the read message
+
+
+=== MODULE_7 and MODULE_8 ===
+
+Stuff related to ethernet. We should go over this, but seem a bit complex to 
+do an exercise on this.

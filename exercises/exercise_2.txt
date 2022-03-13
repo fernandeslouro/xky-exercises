@@ -1,8 +1,0 @@
-=== Exercise 2 ===
-
-On the Readme:
-      scheduling events without polling the schedule status 
-      does the same of the previous module but using events (similar timings)
-
-Don't know too well where to go from here still
-
