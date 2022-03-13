@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<XKYModule Name="boilerplate" Version="1">
+
+    <ModulePartitions>
+        <!-- Add partitions here -->
+    </ModulePartitions>
+    
+    <ModuleSchedules>
+        <!-- Add schedule here -->
+        <!-- Add partition schedule inside schedule -->
+    </ModuleSchedules>
+</XKYModule>
