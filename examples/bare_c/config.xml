@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<XKYModule Name="port example" Version="1">
+
+    <ModulePartitions>
+        <Partition Identifier="0" Name="p0" Cores="1" Configuration="p0/partition_0.xml" />
+    </ModulePartitions>
+    
+    <ModuleSchedules>
+        <Schedule Identifier="1" Name="schedule" MajorFrame="2">
+            <PartitionSchedule PartitionIdentifier="0">
+                <Window Offset="1" Duration="1" />
+            </PartitionSchedule>
+        </Schedule>
+    </ModuleSchedules> 
+</XKYModule>
