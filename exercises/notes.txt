@@ -1,6 +1,0 @@
-=== Exercises to add ===
-
- - Related to permissions/changes in permissions
- - Partition lifecycle (cold, warm, etc)
- - Exercise to test limits
- - 
