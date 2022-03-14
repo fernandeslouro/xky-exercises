@@ -1,0 +1,12 @@
+=== Exercise ===
+
+In the previous exercise, we ran a previously compiled application on a boards,
+which was already placed on the TFTP server. Now, we will be learning the whole
+flow, from compiling an application, moving it to the tftp server, and rebooting
+the board, so that it boots the new app in the tftp server.
+
+1. Start by compiling the XKY application
+2. Move the application to the TFTP server
+3. See what is happening with your board, running the screen command
+4. Run the powerctlr cycle command with your power line so that the board reboots
+5. Exit screen :^)

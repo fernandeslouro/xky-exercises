@@ -1,0 +1,11 @@
+=== Exercise ===
+
+We now want to develop a slightly more complex application. The questions below
+will guide you through developing an application of increasing complexity, 
+while introducing you to the use of different XKY concepts.
+
+Introduced concepts:
+ - using several partitions
+
+1. Implement the same application, but now printing a message in two partitions. 
+2. Now change the functions so that the prints run on endless loops. 

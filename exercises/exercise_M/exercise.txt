@@ -1,0 +1,8 @@
+=== Exercise (MODULE_6) ===
+
+The other type of ports in XKY are sampling ports. This exercise is based on the
+previous one.
+
+Implement:
+ - Change the previous example to use sampling ports. Check the validity of the 
+read message

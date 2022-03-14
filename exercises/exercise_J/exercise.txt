@@ -1,0 +1,10 @@
+=== Exercise (MODULE_4) ===
+
+Functions to use:
+ - get_elapsed_time
+
+We'll now implement some code which makes use of XKY's timer capabilities. 
+
+Implement:
+ - Implement two partitions, which print the global and local elapsed time, every 
+time the partition runs

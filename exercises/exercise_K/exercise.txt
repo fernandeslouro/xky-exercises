@@ -1,0 +1,17 @@
+=== Exercise (MODULE_3) ===
+
+This is a more complex timers exercise. Instead of getting the elapsed time, we
+are now using timers, as well as timer evets.   
+
+Functions to use:
+ - get_timer_tps
+ - start_timer
+
+On the README:
+      partition timers
+      diferent timer expiration per partition
+      timer events
+
+Implement:
+ - Set 4 Different timers for each partition, that will trigger an event that 
+ will print Global time , Local Time and the information of which timer was reached 
