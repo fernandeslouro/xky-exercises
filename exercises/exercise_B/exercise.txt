@@ -1,6 +1,6 @@
 === Exercise ===
 
-In the previous exercise, we ran a previously compiled application on a boards,
+In the previous exercise, we ran a previously compiled application on a board,
 which was already placed on the TFTP server. Now, we will be learning the whole
 flow, from compiling an application, moving it to the tftp server, and rebooting
 the board, so that it boots the new app in the tftp server.
