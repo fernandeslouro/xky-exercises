@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<XKYModule Name="exercise" Version="1">
+
+    <ModulePartitions>
+        <Partition Identifier="0" Name="partition_0" Cores="1" Configuration="partition_0/partition.xml" />
+    </ModulePartitions>
+    
+    <ModuleSchedules>
+        <Schedule Identifier="0" Name="schedule_0" MajorFrame="1" Initial="true">
+            <PartitionSchedule PartitionIdentifier="0">
+                <Window Offset="0" Duration="1" />
+            </PartitionSchedule>
+        </Schedule>
+    </ModuleSchedules>
+</XKYModule>

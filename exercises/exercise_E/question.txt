@@ -7,5 +7,5 @@ Introduced concepts:
  - mtf events stuff
  - partition running times
 
-1. Now make each print once every MTF. Use the function wait_in_next_mtf.
+1. Now make each print once every MTF. Use the function wait_in_next_mtf
 2. Now make partitions take half as long a time to run

@@ -4,11 +4,11 @@ So far, we have only compiled applications we did not write. In this exercise, w
 want to build a very simple XKY application. This app should have a single partition,
 which only prints "Hello World!" and then if should exit. 
 
-You should start writing this application based on the boilerplate code in the
-folder "boilerplate app". Other apps we will write on this course will all be
-based on this one.
+You should start writing this application based on the boilerplate code in this
+folder. Other apps we will write on this course will all be based on this one.
 
-1. Create the necessary files, but leave them empty
-2. Write the XML file for the application
-3. Write the XML file for the partition
-4. Write the C code with "hello world"
+Implement:
+1. Add partition and schedule code to module.xml
+2. Add libraries and memory regions code to partition/partition.xml
+3. Add the "Hello world!" print to partition/main.c
+4. Run the partition code with the xky_deploy script
