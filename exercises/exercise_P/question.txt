@@ -1,4 +1,14 @@
-=== Exercise (MODULE_7 and MODULE_8) ===
+=== Exercise ===
 
-Stuff related to ethernet. We should go over this, but seem a bit complex to 
-do an exercise on this.
+Another way of establishing communication between partitions is through shared
+memory.
+
+On README.
+ - memory regions
+ - memory status
+ - shared memory
+
+Implement:
+1. Print out the memory id and status of every memory region for both partitions
+2. In partition 0, write an integer of your choice to the shared memory, and read
+it in partition 1

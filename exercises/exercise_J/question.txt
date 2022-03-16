@@ -1,10 +1,24 @@
-=== Exercise (MODULE_4) ===
+=== Exercise (MODULE_1) ===
 
-Functions to use:
- - get_elapsed_time
+In this exercise, we will be using XKY's functions to get information about the
+current schedule
 
-We'll now implement some code which makes use of XKY's timer capabilities. 
+This exercise has some similarities to the precious one, but focuses on XKY's 
+functions related to schedules, while the previous one focused on partition-related 
+functions. Implement the sequence below.
+
+Functions to be used:
+ - get_schedule_id
+ - get_schedule_status
+ - set_module_schedule
+ - set_schedule
+ - permissions on changing the module schedule
+
+Easy:
+ - just run get_schedule_id and get_schedule status
 
 Implement:
- - Implement two partitions, which print the global and local elapsed time, every 
-time the partition runs
+ - P1 from time window to time window changes what it does using bare_wake_in_next_mtf
+	1. Prints schedule ID (though: should also add schedule_status, check feasibility)
+	2. Changes schedule 
+ - P2 and P3 Prints schedule ID 

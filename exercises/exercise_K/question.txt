@@ -1,17 +1,12 @@
-=== Exercise (MODULE_3) ===
-
-This is a more complex timers exercise. Instead of getting the elapsed time, we
-are now using timers, as well as timer evets.   
+=== Exercise (MODULE_2) ===
 
 Functions to use:
- - get_timer_tps
- - start_timer
+ - bare_isr_handler_f
+ - bare_isr_install_handler
 
-On the README:
-      partition timers
-      diferent timer expiration per partition
-      timer events
+On the Readme:
+      scheduling events without polling the schedule status 
+      does the same of the previous module but using events (similar timings)
 
 Implement:
- - Set 4 Different timers for each partition, that will trigger an event that 
- will print Global time , Local Time and the information of which timer was reached 
+ - Change the preview example to use events instead of the bare_wake_in_next_mtf

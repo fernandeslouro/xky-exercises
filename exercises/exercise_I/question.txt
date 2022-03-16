@@ -1,12 +1,21 @@
-=== Exercise (MODULE_2) ===
+=== Exercise (MODULE_0) ===
 
-Functions to use:
- - bare_isr_handler_f
- - bare_isr_install_handler
+This exercise is about accessing information about partitions, as well
+as changing the current state of partitions. YOu should figure out how to 
+implement the sequence below, making use of the concepts introduced in previous 
+exercises and the new functions.
 
-On the Readme:
-      scheduling events without polling the schedule status 
-      does the same of the previous module but using events (similar timings)
+Some functions you should use during this exercise:
+ - get_partition_id
+ - get_partition_status
+ - set_partition_mode
+ - bare_wake_next_mtf
+ - permissions on accessing other partition mode and status
 
-Implement:
- - Change the preview example to use events instead of the bare_wake_in_next_mtf
+Impement the following sequence of commands:
+ - ts1 P1 Gets is own ID and Status and print it
+ - ts2 P2 Gets is own ID and Status and print it
+ - ts3 P1 Gets P2 ID and status and print it
+ - ts4 P2 Gets P1 ID and status and print it
+ - ts5 P1 Sets P2 to IDLE, prints P2 status, and the set is own state to IDLE
+ - Both partitions should be stopped

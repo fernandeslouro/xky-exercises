@@ -1,14 +1,27 @@
-=== Exercise ===
+=== Exercise (MODULE_5) ===
 
-Another way of establishing communication between partitions is through shared
-memory.
+So far, all the exercises we have solved have involved partitions which run 
+independently of each other. In this exercise, we will learn about XKY's inter-
+partition communication functions. We'll start with queuing ports.
 
-On README.
- - memory regions
- - memory status
- - shared memory
+TODO: Make sure the exercise specifically makes use of flush_port
+
+Functions to use:
+ - get_port_id
+ - get_port_status
+ - flush_port
+ - read_port
+ - write_port
 
 Implement:
-1. Print out the memory id and status of every memory region for both partitions
-2. In partition 0, write an integer of your choice to the shared memory, and read
-it in partition 1
+ - P1 initially gets port ID, and prints the port status, after that, : 
+	1. Sends a number of messages less than MaxNbMessages
+	2. Sends a message smaller than MaxMessageSize
+ - P2 initially gets port ID, and prints the port status, after that, each time window :
+	1. Read all words on port and checks if is overflowed
+	2. Read message and check if the message size overflowed
+And then:
+ - Now change the partition P1 to
+	1. Sends more messages than MaxNbMessages
+	2. Sends a message larger than MaxMessageSize
+ - Verify that the previous verifications at P2 are working properly

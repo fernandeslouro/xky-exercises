@@ -1,14 +1,11 @@
 === Exercise ===
 
-So far, we have only compiled applications we did not write. In this exercise, we
-want to build a very simple XKY application. This app should have a single partition,
-which only prints "Hello World!" and then if should exit. 
+We' ve previously learned how to see the output of running an XKY application.
+For that, we need to compile the application, move the binary to the TFTP server,
+and then reboot the power on the board, so that we can then see the serial output
+using 'cat' or 'screen'.
 
-You should start writing this application based on the boilerplate code in this
-folder. Other apps we will write on this course will all be based on this one.
+We have simplified this process using a python script, called xky_deploy
 
 Implement:
-1. Add partition and schedule code to module.xml
-2. Add libraries and memory regions code to partition/partition.xml
-3. Add the "Hello world!" print to partition/main.c
-4. Run the partition code with the xky_deploy script
+1. Run the script using 'xky_deploy <xky_folder> <app_folder> -rfc <your_board>

@@ -1,0 +1,4 @@
+=== Exercise (MODULE_7 and MODULE_8) ===
+
+Stuff related to ethernet. We should go over this, but seem a bit complex to 
+do an exercise on this.

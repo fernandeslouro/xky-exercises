@@ -1,8 +1,8 @@
-=== Exercise ===
+=== Exercise (MODULE_6) ===
 
-Exercises about events
+The other type of ports in XKY are sampling ports. This exercise is based on the
+previous one.
 
-enable_port_activity_irq
-
-    /* enable port activity IRQ */
-    bare_isr_install_handler(XKY_IRQ_PORT_ACTIVITY, (bare_isr_handler_f)port_activity);
+Implement:
+ - Change the previous example to use sampling ports. Check the validity of the 
+read message
