@@ -5,6 +5,7 @@ Functions to use:
 
 We'll now implement some code which makes use of XKY's timer capabilities. 
 
-Implement:
- - Implement two partitions, which print the global and local elapsed time, every 
+===
+
+1. Implement two partitions, which print the global and local elapsed time, every 
 time the partition runs

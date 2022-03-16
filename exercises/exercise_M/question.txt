@@ -12,6 +12,7 @@ On the README:
       diferent timer expiration per partition
       timer events
 
-Implement:
- - Set 4 Different timers for each partition, that will trigger an event that 
+===
+
+1. Set 4 Different timers for each partition, that will trigger an event that 
  will print Global time , Local Time and the information of which timer was reached 

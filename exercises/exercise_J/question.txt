@@ -1,11 +1,9 @@
 === Exercise (MODULE_1) ===
 
 In this exercise, we will be using XKY's functions to get information about the
-current schedule
-
-This exercise has some similarities to the precious one, but focuses on XKY's 
-functions related to schedules, while the previous one focused on partition-related 
-functions. Implement the sequence below.
+current schedule. This exercise has some similarities to the previous one, but
+focuses on XKY's functions related to schedules, while the previous one focused 
+on partition-related functions.
 
 Functions to be used:
  - get_schedule_id
@@ -14,11 +12,14 @@ Functions to be used:
  - set_schedule
  - permissions on changing the module schedule
 
-Easy:
- - just run get_schedule_id and get_schedule status
+===
 
-Implement:
- - P1 from time window to time window changes what it does using bare_wake_in_next_mtf
-	1. Prints schedule ID (though: should also add schedule_status, check feasibility)
-	2. Changes schedule 
- - P2 and P3 Prints schedule ID 
+1. Implement the following partition code:
+ - Partition 0: every time P1 runs, it should switch between 2 operations:
+	1. Prints schedule ID
+	2. Changes between schedule_0 and schedule_1
+ - Partition 1: prints schedule ID 
+ - Partition 2: prints schedule ID 
+
+schedule_0: 1 2
+schedule_1: 1 2 3

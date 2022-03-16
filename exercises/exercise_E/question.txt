@@ -7,6 +7,8 @@ questions below will guide you through developing an application of increasing
 Introduced concepts:
  - using several partitions
 
-1. Add a second partition to the code also printing a simple message
-3. Now change the functions so that the prints run on endless loops. It should 
-print the message many times.
+===
+
+1. Add a second partition to the code, also printing a simple message
+2. Now change the functions so that the prints run on endless loops. It should 
+print the message many times

@@ -1,21 +1,23 @@
 Short description of the exercises:
-    A - Run a precompiled application on a board
-    B - Compile an application, move to TFTP server, see board output
-    B2 - Run script
-    C - Create simple app from boilerplate code
-    D - Add a second partition
-    E - add wake_mtf_next_partition
-    F - add another partition and change schedule
-    G - partition id and status (module_0)
-    H - schedule id and status (module_1)
-    I - changing previous example to use events (module_2)
-    J - elapsed time (module_4)
-    K - timers (module_3)
-    L - queuing ports (module_5)
-    M - sampling ports (module_6)
-    N - shared memories (module_7)
-    O - events (module_8) - [TODO]
-    P - ethernet demo
+    A - Run a precompiled application on a board [DONE]
+    B - Compile an application, move to TFTP server, see board output [DONE]
+    C - Run using the script [DONE]
+    D - Create simple app from boilerplate code [DONE]
+    E - Add a second partition, while loop [GOB]
+    F - add wake_mtf_next_partition [GOB]
+    G - Partition id from code [GOB]
+    H - add another partition and change schedule [GOB]
+    I - partition id and status (module_0)[GOB]
+    J - schedule id and status (module_1) [GOB]
+    K - changing previous example to use events (module_2)
+    L - elapsed time (module_4)
+    M - timers (module_3)
+    N - queuing ports (module_5)
+    O - sampling ports (module_6)
+    P - shared memories (module_7)
+    Q - events (module_8) - [TODO]
+    R - ethernet demo - [TODO]
 
 Missing:
- - Exercise about running script
+ - using "introduced concepts" in the exercises?
+ - using "functions to use" in the exercises?

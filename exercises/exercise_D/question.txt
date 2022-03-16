@@ -7,7 +7,8 @@ which only prints "Hello World!" and then if should exit.
 You should start writing this application based on the boilerplate code in this
 folder. Other apps we will write on this course will all be based on this one.
 
-Implement:
+===
+
 1. Add partition and schedule code to module.xml
 2. Add libraries and memory regions code to partition/partition.xml
 3. Add the "Hello world!" print to partition/main.c

@@ -1,11 +1,15 @@
 === Exercise ===
 
 We' ve previously learned how to see the output of running an XKY application.
-For that, we need to compile the application, move the binary to the TFTP server,
-and then reboot the power on the board, so that we can then see the serial output
-using 'cat' or 'screen'.
 
-We have simplified this process using a python script, called xky_deploy
+For that, we need to:
+ - compile the application
+ - rename the binary and move it to the TFTP server
+ - reboot the power on the board
+ - see the serial output using 'cat' or 'screen'
 
-Implement:
-1. Run the script using 'xky_deploy <xky_folder> <app_folder> -rfc <your_board>
+We have simplified this process using a python script, called xky_deploy.
+
+===
+
+1. Run the script using 'xky_deploy <xky_folder> <app_folder> -rfc <your_board>'

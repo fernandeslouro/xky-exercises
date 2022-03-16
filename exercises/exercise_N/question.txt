@@ -13,7 +13,8 @@ Functions to use:
  - read_port
  - write_port
 
-Implement:
+===
+
  - P1 initially gets port ID, and prints the port status, after that, : 
 	1. Sends a number of messages less than MaxNbMessages
 	2. Sends a message smaller than MaxMessageSize

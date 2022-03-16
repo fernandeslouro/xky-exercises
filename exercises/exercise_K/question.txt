@@ -1,5 +1,7 @@
 === Exercise (MODULE_2) ===
 
+
+
 Functions to use:
  - bare_isr_handler_f
  - bare_isr_install_handler
@@ -8,5 +10,6 @@ On the Readme:
       scheduling events without polling the schedule status 
       does the same of the previous module but using events (similar timings)
 
-Implement:
- - Change the preview example to use events instead of the bare_wake_in_next_mtf
+===
+
+1. Change the previous example to use events instead of the bare_wake_in_next_mtf

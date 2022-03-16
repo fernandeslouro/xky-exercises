@@ -1,7 +1,7 @@
 === Exercise (MODULE_0) ===
 
 This exercise is about accessing information about partitions, as well
-as changing the current state of partitions. YOu should figure out how to 
+as changing the current state of partitions. You should figure out how to 
 implement the sequence below, making use of the concepts introduced in previous 
 exercises and the new functions.
 
@@ -12,10 +12,12 @@ Some functions you should use during this exercise:
  - bare_wake_next_mtf
  - permissions on accessing other partition mode and status
 
-Impement the following sequence of commands:
- - ts1 P1 Gets is own ID and Status and print it
- - ts2 P2 Gets is own ID and Status and print it
- - ts3 P1 Gets P2 ID and status and print it
- - ts4 P2 Gets P1 ID and status and print it
- - ts5 P1 Sets P2 to IDLE, prints P2 status, and the set is own state to IDLE
- - Both partitions should be stopped
+===
+
+1. Implement the following sequence of commands:
+ - time step 1: P1 Gets its own ID and Status and prints them
+ - time step 2: P2 Gets its own ID and Status and prints them
+ - time step 3: P1 Gets P2's ID and Status and prints them
+ - time step 4: P2 Gets P1's ID and Status and prints them
+ - time step 5: P1 Sets P2 to IDLE, prints P2 status, and then sets its own state to IDLE
+ - Both partitions should then be stopped

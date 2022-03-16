@@ -5,8 +5,16 @@ which was already placed on the TFTP server. Now, we will be learning the whole
 flow, from compiling an application, moving it to the tftp server, and rebooting
 the board, so that it boots the new app in the tftp server.
 
-1. Start by compiling the XKY application
-2. Move the application to the TFTP server
-3. See what is happening with your board, running the screen command
-4. Run the powerctlr cycle command with your power line so that the board reboots
-5. Exit screen :^)
+Note that we are still not developing the code ourselves, since we are compiling a
+previously developed application.
+
+===
+
+1. Start by compiling the XKY application, running XKY's xmf_make in the app 
+directory
+2. Change the name of XKYAPP.bin to your "Boot App" name
+3. Move the application to the TFTP server (/var/lib/tftpboot/)
+4. See the serial output of your  board, running the cat command (or the alias, 
+ct_<your_board>
+5. Run the ima_powerctrl cycle <your_power_line> command with your power line so 
+that the board reboots

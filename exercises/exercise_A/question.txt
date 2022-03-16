@@ -12,6 +12,8 @@ loaded. We simply want to look at the serial output of our boards, and them
 perform a power cycle so that the binary is booted by the board, and we can see
 the output
 
+===
+
 1. Run "cat /opt/shortc/<your_board_name>"
 2. While maintaining the first terminal window open, run 
       "ima_powerctrl cycle <your_power_line_number>"
