@@ -1,7 +1,5 @@
 === Exercise (MODULE_2) ===
 
-
-
 Functions to use:
  - bare_isr_handler_f
  - bare_isr_install_handler

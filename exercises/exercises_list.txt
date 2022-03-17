@@ -10,8 +10,8 @@ Short description of the exercises:
     I - partition id and status (module_0)[GOB]
     J - schedule id and status (module_1) [GOB]
     K - changing previous example to use events (module_2)
-    L - elapsed time (module_4)
-    M - timers (module_3)
+    L - elapsed time (module_4) [GOB]
+    M - timers (module_3) [GOB]
     N - queuing ports (module_5)
     O - sampling ports (module_6)
     P - shared memories (module_7)

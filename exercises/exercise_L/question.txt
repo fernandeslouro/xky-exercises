@@ -1,9 +1,12 @@
 === Exercise (MODULE_4) ===
 
+We'll now implement some code which makes use of XKY's timer capabilities. There
+are two times: local and global. Local relates to the time that the present 
+partition has been running since the timer started, while global time relates
+
 Functions to use:
  - get_elapsed_time
 
-We'll now implement some code which makes use of XKY's timer capabilities. 
 
 ===
 

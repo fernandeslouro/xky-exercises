@@ -11,5 +11,7 @@ On README:
 ===
 
 1. Print out the memory id and status of every memory region for both partitions
-2. In partition 0, write an integer of your choice to the shared memory, and read
-it in partition 1
+2. In partition_0, write an integer of your choice to the shared memory, and read
+it in partition_1
+3. In partition_1, write an integer of your choice to the shared memory, and read
+it in partition_0

@@ -1,18 +1,15 @@
 === Exercise (MODULE_3) ===
 
-This is a more complex timers exercise. Instead of getting the elapsed time, we
-are now using timers, as well as timer evets.   
+This is a more complex timing exercise. Beyond counting local and global elapsed
+time, XKY can set timers, which this exercise is about.
 
 Functions to use:
  - get_timer_tps
  - start_timer
 
-On the README:
-      partition timers
-      diferent timer expiration per partition
-      timer events
-
 ===
 
-1. Set 4 Different timers for each partition, that will trigger an event that 
- will print Global time , Local Time and the information of which timer was reached 
+1. For partition_0, set 4 timers (1/8, 1/4, 1/2 and 1 second) using timer events
+2. For partition_1, set 2 timers (2 and 4 seconds) using timer events
+3. When the timers finish, they should trigger an event that should print the 
+current partition, the finished timer and global time
