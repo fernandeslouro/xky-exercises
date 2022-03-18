@@ -26,8 +26,6 @@ XKY_TARGETS = {
     "valencia": XKYTarget("valencia", "powerpc-p1010rdb", "XKY_P1010_4", 8),
     "aveiro": XKYTarget("aveiro", "powerpc-p1010rdb", "XKY_P2020_0", "p2"),
     "londres": XKYTarget("londres", "powerpc64-t1042 --ccb 600000000", "XKY_t1042_QT_2", "p3"),
-    # TODO: make qemu work (it crashes at the moment)
-    "qemu": XKYTarget("qemu", "powerpc-p1010qemu", "XKY_P1010_QEMU", "none"),
 }
 
 
