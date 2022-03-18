@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<XKYModule Name="kickoff_demo" Version="1">
+
+    <ModulePartitions>
+        <Partition Identifier="0" Name="partition_0" Cores="1" Configuration="partition_0/partition_0.xml" />
+        <Partition Identifier="1" Name="partition_1" Cores="1" Configuration="partition_1/partition_1.xml" />
+        <Partition Identifier="2" Name="partition_2" Cores="1" Configuration="partition_2/partition_2.xml" />
+        <Partition Identifier="3" Name="partition_3" Cores="1" Configuration="partition_3/partition_3.xml" />
+        <Partition Identifier="4" Name="partition_4" Cores="1" Configuration="partition_4/partition_4.xml" />
+    </ModulePartitions>
+    
+    <ModuleSchedules>
+        <Schedule Identifier="1" Name="schedule" MajorFrame="10">
+            <PartitionSchedule PartitionIdentifier="0">
+                <Window Offset="0" Duration="2" />
+            </PartitionSchedule>
+            <PartitionSchedule PartitionIdentifier="1">
+                <Window Offset="2" Duration="2" />
+            </PartitionSchedule>
+            <PartitionSchedule PartitionIdentifier="2">
+                <Window Offset="4" Duration="2" />
+            </PartitionSchedule>
+            <PartitionSchedule PartitionIdentifier="3">
+                <Window Offset="6" Duration="2" />
+            </PartitionSchedule>
+            <PartitionSchedule PartitionIdentifier="4">
+                <Window Offset="8" Duration="2" />
+            </PartitionSchedule>
+        </Schedule>
+    </ModuleSchedules> 
+</XKYModule>
