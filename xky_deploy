@@ -36,9 +36,7 @@ def main():
     parser.add_argument("xky_path", help="The path to the XKY distribution")
     parser.add_argument("app_path", help="The path to the application")
     parser.add_argument("target", choices=XKY_TARGETS.keys(), help="The target on which to deploy")
-    parser.add_argument("-i", "--install", action="store_true", help="Install XKY before building the application")
     parser.add_argument("-x", "--xml", metavar="FILENAME", help="Explicitly provide the name of the application's XML module configuration file")
-    parser.add_argument("-s", "--source", action="store_true", help="Whether the source code is present on xky_path, or simply the compiled files")
     parser.add_argument("-f", "--force", action="store_true", help="Force deployment by deleting existing files")
     parser.add_argument("-r", "--reset", action="store_true", help="Reset the target's power after deployment")
     parser.add_argument("-c", "--connect", action="store_true", help="Connect to the target's serial port after deployment")
@@ -46,21 +44,9 @@ def main():
 
     target = XKY_TARGETS[args.target]
 
-    # Install XKY
-    if args.install:
-        print("\nInstalling XKY...")
-        subprocess.run(["make", "distclean"], cwd=args.xky_path)
-        subprocess.run(["rm", "-rf", "install"], cwd=args.xky_path)
-        subprocess.run([os.path.join(".", "configure")] + target.config.split(), cwd=args.xky_path)
-        subprocess.run(["make"], cwd=args.xky_path)
-        subprocess.run(["make", "install"], cwd=args.xky_path)
-
     # Build app
     print("\nBuilding Application...")
     subprocess.run(["make", "distclean"], cwd=args.app_path)
-    if args.source:
-        xmf_make_path = os.path.join(os.path.relpath(args.xky_path, args.app_path), "install", "xmf_make")
-    else:
         xmf_make_path = os.path.join(os.path.relpath(args.xky_path, args.app_path), "xmf_make")
     if args.xml:
         subprocess.run([xmf_make_path, args.xml], cwd=args.app_path)
