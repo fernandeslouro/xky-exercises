@@ -58,7 +58,10 @@ def main():
     dst_path = os.path.join(XKY_TARGET_TFTP_DIR, target.tftp_file)
     if args.force:
         subprocess.run(["rm", "-f", dst_path])
-    subprocess.run(["cp", src_path, dst_path])
+
+    # Run cp as dialout group
+    cp_command = f'cp {src_path} {dst_path}'
+    subprocess.run(['sg', 'dialout', '-c', cp_command])
 
     # Reset board
     if args.reset:
