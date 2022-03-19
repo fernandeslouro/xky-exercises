@@ -10,11 +10,11 @@ previously developed application.
 
 ===
 
-1. Start by compiling the XKY application, running XKY's xmf_make in the app 
-directory
-2. Change the name of XKYAPP.bin to your "Boot App" name
-3. Move the application to the TFTP server (/var/lib/tftpboot/)
-4. See the serial output of your  board, running the cat command (or the alias, 
-ct_<your_board>
-5. Run the ima_powerctrl cycle <your_power_line> command with your power line so 
-that the board reboots
+1. Compile the XKY application, running XKY's xmf_make in the app directory 
+    "../../../XKY/install/xmf_make", or use the absolute path of xmf_make
+2. Change to the "executable" directory "cd executable/"
+3. Move the application to the TFTP  server, while renaming it to your "Boot App"
+    name "cp XKYAPP.bin /var/lib/tftpboot/<your_boot_app>"
+4. See the serial output of your  board, running "cat /opt/shortc/<your_board>
+    (or the alias, "ct_<your_board>")
+5. Reboot your board with "ima_powerctrl cycle <your_power_line>" 

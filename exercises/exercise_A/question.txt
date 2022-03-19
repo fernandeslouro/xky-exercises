@@ -14,7 +14,10 @@ the output
 
 ===
 
-1. Run "cat /opt/shortc/<your_board_name>"
-2. While maintaining the first terminal window open, run 
-      "ima_powerctrl cycle <your_power_line_number>"
-3. What do you see on the serial output window?
+1. Open two terminal windows 
+2. Run "cat /opt/shortc/<your_board_name>"
+3. While maintaining the first terminal window open, run 
+      "ima_powerctrl cycle <your_power_line_number>". What do you see on the 
+      serial output window?
+4. Perform the same sequence, but now using the alias "ct_<your_board_name>"
+      (without spaces)

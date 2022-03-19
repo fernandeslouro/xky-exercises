@@ -15,9 +15,9 @@ Some functions you should use during this exercise:
 ===
 
 1. Implement the following sequence of commands:
- - time step 1: P1 Gets its own ID and Status and prints them
- - time step 2: P2 Gets its own ID and Status and prints them
- - time step 3: P1 Gets P2's ID and Status and prints them
- - time step 4: P2 Gets P1's ID and Status and prints them
- - time step 5: P1 Sets P2 to IDLE, prints P2 status, and then sets its own state to IDLE
+ - time step 1: partition_0 gets its own ID and Status and prints them
+ - time step 2: partition_1 gets its own ID and Status and prints them
+ - time step 3: partition_0 gets partition_1's ID and Status and prints them
+ - time step 4: partition_1 gets partition_0's ID and Status and prints them
+ - time step 5: partition_0 sets partition_1 to IDLE, prints partition_1 status, and then sets its own state to IDLE
  - Both partitions should then be stopped
