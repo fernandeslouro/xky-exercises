@@ -15,11 +15,11 @@ Functions to be used:
 ===
 
 1. Implement the following partition code:
- - Partition 0: every time P1 runs, it should switch between 2 operations:
+ - partition_0: every time P1 runs, it should switch between 2 operations:
 	1. Prints schedule ID
 	2. Changes between schedule_0 and schedule_1
- - Partition 1: prints schedule ID 
- - Partition 2: prints schedule ID 
-
-schedule_0: 1 2
-schedule_1: 1 2 3
+ - partition_1: prints schedule ID 
+ - partition_2: prints schedule ID 
+2. Implement the following schedule sequence
+ - schedule_0: 0 1
+ - schedule_1: 0 1 2

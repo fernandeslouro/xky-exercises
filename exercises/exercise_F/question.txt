@@ -9,5 +9,7 @@ Introduced concepts:
 
 ===
 
-1. Add a new partition, and a new schedule, so that the partitions run in the following
-order: : 1 2 1 3 1 2 1 3
+1. Add a new partition (partition_2)
+2. Add a new schedule,  running partition_0 and parition_2 
+3. Change between schedules so that the partitions run in the following order: 
+0 1 0 2 0 1 0 2
