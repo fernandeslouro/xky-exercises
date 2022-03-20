@@ -3,11 +3,6 @@
 Another way of establishing communication between partitions is through shared
 memory.
 
-On README:
- - memory regions
- - memory status
- - shared memory
-
 ===
 
 1. Add a shared memory to the starter code

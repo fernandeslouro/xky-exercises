@@ -2,6 +2,9 @@
 
 Exercise about events
 
+New functions to use:
+ - bare_isr_install_handler (now for port activity)
+
 ===
 
 1. In the configuration, implement a sampling port with partition_0 as source

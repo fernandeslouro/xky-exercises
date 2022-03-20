@@ -5,10 +5,10 @@ are two times: local and global. Local relates to the time that the present
 partition has been running since the timer started, while global time relates
 
 New functions to use:
- - get_elapsed_time
+ - xky_syscall_get_elapsed_time
 
 
 ===
 
-1. Implement two partitions, which print the global and local elapsed time, every 
-time the partition runs
+1. Implement two partitions, printing the global and local elapsed time every 
+time they run

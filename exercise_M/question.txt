@@ -4,8 +4,9 @@ This is a more complex timing exercise. Beyond counting local and global elapsed
 time, XKY can set timers, which this exercise is about.
 
 Functions to use:
- - get_timer_tps
- - start_timer
+ - xky_syscall_start_timer
+ - xky_syscall_get_timer_tps
+ - bare_isr_install_handler (used for timer evets)
 
 ===
 

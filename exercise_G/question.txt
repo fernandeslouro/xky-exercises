@@ -5,11 +5,11 @@ and a different schedule. You could implement this as a singe schedule, but in
 this exercise you should implement it as two schedules.
 
 Introduced concepts:
- - schedules
+ - xky_syscall_set_schedule
 
 ===
 
 1. Add a new partition (partition_2)
-2. Add a new schedule,  running partition_0 and parition_2 
-3. Change between schedules so that the partitions run in the following order: 
-0 1 0 2 0 1 0 2
+2. Add a new schedule, running partition_0 and parition_2 
+3. Implement the correct partition code so that the partitions run in the following
+order: 0 1 0 2 0 1 0 2

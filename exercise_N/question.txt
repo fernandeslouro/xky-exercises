@@ -4,14 +4,12 @@ So far, all the exercises we have solved have involved partitions which run
 independently of each other. In this exercise, we will learn about XKY's inter-
 partition communication functions. We'll start with queuing ports.
 
-TODO: Make sure the exercise specifically makes use of flush_port
-
 Functions to use:
- - get_port_id
- - get_port_status
- - flush_port
- - read_port
- - write_port
+ - xky_syscall_get_port_id
+ - xky_syscall_get_port_status
+ - xky_syscall_read_port
+ - xky_syscall_write_port
+ - xky_syscall_flush_port
 
 ===
 
