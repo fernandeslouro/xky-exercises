@@ -1,0 +1,8 @@
+=== Exercise (MODULE_2) ===
+
+Functions to use:
+ - bare_isr_install_handler
+
+===
+
+1. Change the previous example to use events instead of the bare_wake_in_next_mtf

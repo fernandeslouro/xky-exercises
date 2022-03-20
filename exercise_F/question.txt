@@ -1,0 +1,12 @@
+=== Exercise ===
+
+We now want to get our partition name from the code, instead of having it
+"hard-coded" on the partition code.
+
+New functions to use:
+ - xky_syscall_get_partition_id
+
+===
+
+1. Change the partition code so that the partition id is given by functions,
+instead of being written directly on the print code
