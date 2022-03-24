@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<XKYModule Name="module_7" Version="1" Targets="powerpc-p1010rdb;powerpc64-t1042">
+
+    <ModulePartitions>
+        <Partition Identifier="0" Name="partition_0" Cores="1" Configuration="partition_0/partition.xml" />
+        <Partition Identifier="1" Name="partition_1" Cores="1" Configuration="partition_1/partition.xml" />
+    </ModulePartitions>
+
+    <ModuleSchedules>
+        <Schedule Identifier="0" Name="schedule_0" MajorFrame="2" Initial="true">
+            <PartitionSchedule PartitionIdentifier="0">
+                <Window Offset="0" Duration="1" />
+            </PartitionSchedule>
+            <PartitionSchedule PartitionIdentifier="1">
+                <Window Offset="1" Duration="1" />
+            </PartitionSchedule>
+        </Schedule>
+    </ModuleSchedules>
+
+    <ModuleMemoryMap>
+        <PartitionMemoryMap PartitionIdentifier="0">
+            <Region Identifier="0" Size="64Kb" />
+            <Region Identifier="1" Size="512Kb" />
+            <Region Identifier="2" Size="4Kb" />
+            <Region Identifier="3" Size="4Kb" />
+        </PartitionMemoryMap>
+
+        <PartitionMemoryMap PartitionIdentifier="1">
+            <Region Identifier="0" Size="64Kb" />
+            <Region Identifier="1" Size="512Kb" />
+        </PartitionMemoryMap>
+
+        <SharedMemoryRegion Identifier="100" Name="shm_mem" Size="12MB">
+            <Access PartitionIdentifier="0" Permissions="RW" CacheAttributes="WRITE_THROUGH" />
+            <Access PartitionIdentifier="1" Permissions="RW" CacheAttributes="WRITE_THROUGH" />
+        </SharedMemoryRegion>
+    </ModuleMemoryMap>
+
+</XKYModule>

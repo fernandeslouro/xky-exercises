@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Partition Identifier="0" Name="partition_0">
+    <BuildConfiguration>
+        <Personality Name="BARE">
+            <BareConfiguration EntryPoint="entry_point" CodeMemoryRegion="0" DataMemoryRegion="1" />
+        </Personality>
+        <Libraries>
+            <Library Name="LIBXKY" Options="" />
+            <Library Name="LIBPRINTF" Options="" />
+        </Libraries>
+    </BuildConfiguration>
+    
+    <Ports>
+        <SamplingPort ChannelIdentifier="0" Name="port_0" Direction="SOURCE" MaxMessageSize="32" ReaderPeriod="2s" />
+    </Ports>
+    
+    <MemoryMap>
+        <Region Identifier="0" Name="code" Permissions="RX" CacheAttributes="COPY_BACK" />
+        <Region Identifier="1" Name="data" Permissions="RW" CacheAttributes="WRITE_THROUGH" />
+    </MemoryMap>
+</Partition>
