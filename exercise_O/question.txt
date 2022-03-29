@@ -7,3 +7,4 @@ previous one.
 
 1. Change the previous example to use sampling ports. Check the validity of the 
 read message.
+2. Stall a message beyond its validity value.

@@ -1,5 +1,8 @@
 === Exercise (MODULE_2) ===
 
+In XKY, you can trigger functions to happen at specific events, such as when there
+is a new MTF, or a healthmonitor event.
+
 Functions to use:
  - bare_isr_install_handler
 

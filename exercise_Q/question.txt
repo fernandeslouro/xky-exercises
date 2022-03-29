@@ -10,7 +10,7 @@ New functions to use:
 1. In the configuration, implement a sampling port with partition_0 as source
  and partition_1, partition_2 and partition_3 as destination
 2.Implement the following partition code:
- - partition_0: every MTF, send 10 messages ("message <number>)  on port_0
+ - partition_0: every MTF, send a message ("message <number>) on port_0
  - other partitions: 
     - whenever there is port activity, increase a counter for the number of port
 activity events and print it.

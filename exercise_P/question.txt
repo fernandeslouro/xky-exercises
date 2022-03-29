@@ -15,4 +15,4 @@ you read it from
  - partition_1: Write an integer to shared memory, increasing it every mtf
  - partition_0: read the integer, printing it, as well as the name of the memory 
 you read it from
-5. Print nemory cache attributes and memory permissions
+5. Optional: print nemory cache attributes and memory permissions

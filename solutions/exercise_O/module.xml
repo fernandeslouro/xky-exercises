@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<XKYModule Name="exercise" Version="1">
+
+    <ModulePartitions>
+        <Partition Identifier="0" Name="partition_0" Cores="1" Configuration="partition_0/partition.xml" />
+        <Partition Identifier="1" Name="partition_1" Cores="1" Configuration="partition_1/partition.xml" />
+    </ModulePartitions>
+    
+    <ModuleSchedules>
+        <Schedule Identifier="0" Name="schedule_0" MajorFrame="2" Initial="true">
+            <PartitionSchedule PartitionIdentifier="0">
+                <Window Offset="0" Duration="1" />
+            </PartitionSchedule>
+            <PartitionSchedule PartitionIdentifier="1">
+                <Window Offset="1" Duration="1" />
+            </PartitionSchedule>
+        </Schedule>
+    </ModuleSchedules>
+    
+    <ModuleChannels>
+        <Channel Identifier="0" Name="channel_0" QoS="256kb">
+             <Source>
+                <StandardPartition PartitionIdentifier="0" />
+             </Source>
+             <Destination>
+                <StandardPartition PartitionIdentifier="1" />
+             </Destination>
+        </Channel>
+    </ModuleChannels>
+</XKYModule>
