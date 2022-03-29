@@ -1,19 +1,18 @@
 Short description of the exercises:
-    A - Run a precompiled application on a board [DONE]
-    B - Compile an application, move to TFTP server, see board output [DONE]
-    C - Run using the script [DONE]
-    D - Create simple app from boilerplate code [DONE]
-    E - Add a second partition, while loop [RUN]
-    F - Partition id from code [RUN]
-    G - add another partition and change schedule 
-    H - add wake_mtf_next_partition [RUN]
-    I - partition id and status (module_0) [RUN]
-    J - schedule id and status (module_1) [RUN]
-    K - changing previous example to use events (module_2) - needs text
-    L - elapsed time (module_4) [RUN]
-    M - timers (module_3) [RUN]
-    N - queuing ports (module_5) [RUN]
-    O - sampling ports (module_6) [RUN]
-    P - shared memories (module_7) [RUN]
-    Q - events (module_8) - needs text
-    R - ethernet demo - [TODO]
+    A - Run a precompiled application on a board
+    B - Compile an application, move to TFTP server, see board output
+    C - Run using the script
+    D - Create simple app from boilerplate code
+    E - Add a second partition, while loop
+    F - Partition id from code
+    G - Add another partition and change schedule 
+    H - Add wake_mtf_next_partition
+    I - Partition id and status (module_0)
+    J - Schedule id and status (module_1)
+    K - Changing previous example to use events (module_2) - needs text
+    L - Elapsed time (module_4)
+    M - Timers (module_3)
+    N - Queuing ports (module_5)
+    O - Sampling ports (module_6)
+    P - Shared memories (module_7)
+    Q - Events (module_8) - needs text
