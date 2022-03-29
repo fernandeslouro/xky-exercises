@@ -8,6 +8,5 @@ void entry_point(void)
     while (1)
     {
         xky_printf("Partition 1!\n");
-        bare_wake_in_next_mtf();
     }
 }
