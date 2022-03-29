@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Partition Identifier="0" Name="partition_0">
+
+    <BuildConfiguration>
+        <Personality Name="BARE">
+            <BareConfiguration EntryPoint="test_entry" CodeMemoryRegion="0" DataMemoryRegion="1" />
+        </Personality>
+        <Libraries>
+            <Library Name="LIBXKY" Options="" />
+            <Library Name="LIBPRINTF" Options="" />
+        </Libraries>
+    </BuildConfiguration>
+
+    <MemoryMap>
+        <Region Identifier="0" Name="mem_code" Permissions="RX" CacheAttributes="COPY_BACK" VirtualAddress="0x90000000" />
+        <Region Identifier="1" Name="mem_data" Permissions="RW" CacheAttributes="WRITE_THROUGH" VirtualAddress="0x90080000" />
+    </MemoryMap>
+
+    <HealthMonitor>
+        <SystemState Identifier="3">
+            <Error Identifier="2" Action="COLD_START" />
+        </SystemState>
+    </HealthMonitor>
+
+</Partition>

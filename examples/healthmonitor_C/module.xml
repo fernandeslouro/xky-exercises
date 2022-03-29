@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<XKYModule Name="healthmonitor_C" Version="1">
+
+    <ModulePartitions>
+        <Partition Identifier="0" Name="partition_0" Cores="1" Configuration="partition_0/partition.xml" />
+    </ModulePartitions>
+
+    <ModuleSchedules>
+        <Schedule Identifier="1" Name="schedule_0" MajorFrame="1">
+            <PartitionSchedule PartitionIdentifier="0">
+                <Window Offset="0" Duration="1" PeriodStart="true" />
+            </PartitionSchedule>
+        </Schedule>
+    </ModuleSchedules>
+
+    <ModuleHealthMonitor>
+        <SystemState Identifier="3">
+            <Error Identifier="2" Level="PARTITION" />
+        </SystemState>
+    </ModuleHealthMonitor>
+
+    <ModuleMemoryMap>
+        <PartitionMemoryMap PartitionIdentifier="0">
+            <Region Identifier="0" Size="64Kb" />
+            <Region Identifier="1" Size="512Kb" />
+        </PartitionMemoryMap>
+    </ModuleMemoryMap>
+
+</XKYModule>

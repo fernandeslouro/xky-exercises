@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?> 
-<XKYModule Name="kickoff_demo" Version="1">
+<XKYModule Name="demo_kickoff" Version="1">
 
     <ModulePartitions>
         <Partition Identifier="0" Name="partition_0" Cores="1" Configuration="partition_0/partition_0.xml" />
