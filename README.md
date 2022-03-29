@@ -11,13 +11,13 @@ Short description of the exercises:
  * H - Using bare functions (bare_wake_in_next_mtf)
  * I - Partition id and status (module_0)
  * J - Schedule id and status (module_1)
- * K - Changing previous example to use events (module_2) - needs text
+ * K - Changing previous example to use events (module_2)
  * L - Elapsed time (module_4)
  * M - Timers (module_3)
  * N - Queuing ports (module_5)
  * O - Sampling ports (module_6)
  * P - Shared memories (module_7)
- * Q - Events (module_8) - needs text
+ * Q - Events (module_8)
 
 In the `examples` folder:
  * bare_c - simple application printing ASCII art
