@@ -1,12 +1,8 @@
-/**
- * @file
- * @brief Simplest partition code
- */
-
 #include <xky_printf.h>
+#include <xky.h>
 
 void entry_point(void) {
 
-    // Add "Hello World!" print here
+    xky_printf("Partition 0!\n");
 
 }

@@ -4,8 +4,9 @@
 
 void entry_point(void)
 {
+
     while (1)
     {
-        xky_printf("Partition 0!\n");
+        xky_printf("Partition 1!\n");
     }
 }
